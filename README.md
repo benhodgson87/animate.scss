@@ -9,7 +9,7 @@ Offers feature parity to version 3.2
 
 ## Installing
 
-### Bower
+#### Bower
 
 Install by running:
 ```bower install sass-animate```
@@ -17,7 +17,7 @@ Install by running:
 
 ## Customisation Options
 
-### Optional Modules
+#### Optional Modules
 
 All of the animations are optional, and easily switched on and off using Sass
 variables. This should result in smaller end file sizes, if you only the modules
@@ -27,7 +27,7 @@ You can also override individual module level options and enable every module
 with a single variable, which may be useful for development.
 
 
-### Vendor Prefixes
+#### Vendor Prefixes
 
 Vendor prefixes can be enabled or disabled through a single Sass variable, that
 can be set either within the core Animate.scss code, or in any file that includes
@@ -40,7 +40,7 @@ When enabled, all necessary CSS declarations include vendor prefixes for Webkit,
 Mozilla, and Opera browsers.
 
 
-### Class Naming
+#### Class Naming
 
 All animation class names are defined through a single config file, allowing you
 to choose how the output CSS is named.
