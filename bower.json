@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "homepage": "https://github.com/benhodgson87/animate.scss",
   "authors": [
-    "Ben Hodgson <ben.hodgson@crowdsurge.com>"
+    "Ben Hodgson <work@benhodgson.net>"
   ],
   "description": "An SCSS (Sass) port of Dan Eden's animate.css animation library",
-  "main": "dist/animate.css",
+  "main": "src/_animate.scss",
   "keywords": [
     "animate.css",
     "animate",
