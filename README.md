@@ -7,7 +7,7 @@ https://github.com/daneden/animate.css
 Offers feature parity to version 3.2
 
 
-TODO: Better documentation. It's coming.
+___TODO:___ _Better documentation. It's coming._
 
 
 ## Installing
