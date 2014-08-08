@@ -7,6 +7,9 @@ https://github.com/daneden/animate.css
 Offers feature parity to version 3.2
 
 
+TODO: Better documentation. It's coming.
+
+
 ## Installing
 
 Either clone this repo, or install with Bower by running:
