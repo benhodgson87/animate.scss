@@ -14,7 +14,7 @@ ___TODO:___ _Better documentation. It's coming._
 
 ```bower install animate-scss```
 
-Once installed, ```@import src/_animate``` file from your bower_components folder into your own project (adjusting the path to the import as necessary). Be sure to set any variable overrides beforehand.
+Once installed, ```@import 'src/_animate'``` from your bower_components folder into your own project (adjusting the path to the import as necessary). Be sure to set any variable overrides beforehand.
 
 
 ## Customisation Options
