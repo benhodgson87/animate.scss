@@ -9,10 +9,10 @@ Offers feature parity to version 3.2
 
 ## Installing
 
-#### Bower
-
-Install by running:
+Either clone this repo, or install with Bower by running:
 ```bower install animate-scss```
+
+Once installed, ```@import``` the ```src/_animate.scss``` file into your own project, setting any variable overrides that need to be pulled in beforehand.
 
 
 ## Customisation Options
