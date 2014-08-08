@@ -20,7 +20,7 @@ Install by running:
 #### Optional Modules
 
 All of the animations are optional, and easily switched on and off using Sass
-variables. This should result in smaller end file sizes, if you only the modules
+variables. This should result in smaller end file sizes, by only enabling the modules
 you are using.
 
 You can also override individual module level options and enable every module
@@ -43,9 +43,9 @@ Mozilla, and Opera browsers.
 #### Class Naming
 
 All animation class names are defined through a single config file, allowing you
-to choose how the output CSS is named.
+to alter how the output CSS classes are named.
 
-You can also add a namespace to all class names, giving you flexibility to use
+You can also append a namespace to all class names, giving you flexibility to use
 methods such as BEM, prefixing the animation type with your choice of modifier.
 eg. ```(.animation--bounce-in)```
 
