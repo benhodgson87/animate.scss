@@ -12,7 +12,7 @@
 // USE VENDOR PREFIXES?
 // Set this to true if you want vendor prefixes for webkit, mozilla, and opera
 // Leave this false if you're already using something awesome like Autoprefixer
-$enable-prefixes              : true !default;
+$enable-prefixes              : false !default;
 
 
 
@@ -29,7 +29,7 @@ $default-iteration-count      : infinite !default;
 
 // Override individual module variables and enable all?
 // Careful now
-$enable-all-modules           : true !default;
+$enable-all-modules           : false !default;
 
 
 // Fade In
