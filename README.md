@@ -9,12 +9,10 @@ Offers feature parity to version 3.2
 
 ## Installing
 
-***Don't try and use this yet, it's not finished.***
+### Bower
 
-<!-- ### Bower
-
-Grab the library by running:
-``` bower install animate.scss``` -->
+Install by running:
+```bower install sass-animate```
 
 
 ## Customisation Options
