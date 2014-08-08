@@ -1,6 +1,6 @@
 # animate.scss
 
-A powerful, highly customisable SCSS port of Dan Eden's animate.scss library.
+A powerful, highly customisable SCSS port of Dan Eden's animate.css library.
 
 https://github.com/daneden/animate.css
 
