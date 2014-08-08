@@ -1,0 +1,46 @@
+$keyframe-name: $name-swing;
+$class-name: namespace($name-swing);
+
+@mixin animate-swing($prefix: '') {
+    20% {
+        #{$prefix}transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        #{$prefix}transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        #{$prefix}transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        #{$prefix}transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        #{$prefix}transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@if $enable-all-modules == true or $enable-swing == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-swing('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-swing('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-swing('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-swing();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(transform-origin, 'top center');
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

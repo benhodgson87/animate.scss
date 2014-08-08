@@ -1,0 +1,49 @@
+$keyframe-name: $name-hinge;
+$class-name: namespace($name-hinge);
+
+@mixin animate-hinge($prefix: '') {
+    0% {
+        #{$prefix}transform-origin: top left;
+        #{$prefix}animation-timing-function: ease-in-out;
+    }
+    20%, 60% {
+        #{$prefix}transform: rotate3d(0, 0, 1, 80deg);
+        #{$prefix}transform-origin: top left;
+        #{$prefix}animation-timing-function: ease-in-out;
+    }
+    40%, 80% {
+        #{$prefix}transform: rotate3d(0, 0, 1, 60deg);
+        #{$prefix}transform-origin: top left;
+        #{$prefix}animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+    100% {
+        #{$prefix}transform: translate3d(0, 700px, 0);
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-hinge == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-hinge('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-hinge('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-hinge('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-hinge();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

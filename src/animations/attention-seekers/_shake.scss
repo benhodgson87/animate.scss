@@ -1,0 +1,39 @@
+$keyframe-name: $name-shake;
+$class-name: namespace($name-shake);
+
+@mixin animate-shake($prefix: '') {
+    0%, 100% {
+        #{$prefix}transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        #{$prefix}transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+        #{$prefix}transform: translate3d(10px, 0, 0);
+    }
+}
+
+@if $enable-all-modules == true or $enable-shake == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-shake('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-shake('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-shake('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-shake();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

@@ -1,0 +1,39 @@
+$keyframe-name: $name-fade-in-right;
+$class-name: namespace($name-fade-in-right);
+
+@mixin animate-fade-in-right($prefix: '') {
+    0% {
+        opacity: 0;
+        #{$prefix}transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        #{$prefix}transform: none;
+    }
+}
+
+@if $enable-all-modules == true or $enable-fade-in-right == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-fade-in-right('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-fade-in-right('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-fade-in-right('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-fade-in-right();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

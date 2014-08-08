@@ -1,0 +1,40 @@
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+$keyframe-name: $name-roll-in;
+$class-name: namespace($name-roll-in);
+
+@mixin animate-roll-in($prefix: '') {
+    0% {
+        opacity: 0;
+        #{$prefix}transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+    100% {
+        opacity: 1;
+        #{$prefix}transform: none;
+    }
+}
+
+@if $enable-all-modules == true or $enable-roll-in == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-roll-in('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-roll-in('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-roll-in('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-roll-in();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

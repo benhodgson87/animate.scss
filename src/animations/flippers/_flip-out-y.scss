@@ -1,0 +1,43 @@
+$keyframe-name: $name-flip-out-y;
+$class-name: namespace($name-flip-out-y);
+
+@mixin animate-flip-out-y($prefix: '') {
+    0% {
+        #{$prefix}transform: perspective(400px);
+    }
+
+    30% {
+        #{$prefix}transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+        opacity: 1;
+    }
+
+    100% {
+        #{$prefix}transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-flip-out-y == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-flip-out-y('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-flip-out-y('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-flip-out-y('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-flip-out-y();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

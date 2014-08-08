@@ -1,0 +1,40 @@
+$keyframe-name: $name-rotate-out;
+$class-name: namespace($name-rotate-out);
+
+@mixin animate-rotate-out($prefix: '') {
+    0% {
+        #{$prefix}transform-origin: center;
+        opacity: 1;
+    }
+
+    100% {
+        #{$prefix}transform-origin: center;
+        #{$prefix}transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-rotate-out == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-rotate-out('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-rotate-out('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-rotate-out('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-rotate-out();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

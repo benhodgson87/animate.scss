@@ -1,0 +1,55 @@
+$keyframe-name: $name-bounce-in-right;
+$class-name: namespace($name-bounce-in-right);
+
+@mixin animate-bounce-in-right($prefix: '') {
+    0%, 60%, 75%, 90%, 100% {
+        #{$prefix}transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        #{$prefix}transform: translate3d(3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        #{$prefix}transform: translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        #{$prefix}transform: translate3d(10px, 0, 0);
+    }
+
+    90% {
+        #{$prefix}transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        #{$prefix}transform: none;
+    }
+}
+
+@if $enable-all-modules == true or $enable-bounce-in-right == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-bounce-in-right('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-bounce-in-right('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-bounce-in-right('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-bounce-in-right();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

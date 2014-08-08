@@ -1,0 +1,53 @@
+$keyframe-name: $name-flip-in-x;
+$class-name: namespace($name-flip-in-x);
+
+@mixin animate-flip-in-x($prefix: '') {
+    0% {
+        #{$prefix}transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        #{$prefix}transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        #{$prefix}transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        #{$prefix}transition-timing-function: ease-in;
+    }
+
+    60% {
+        #{$prefix}transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        #{$prefix}transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        #{$prefix}transform: perspective(400px);
+    }
+}
+
+@if $enable-all-modules == true or $enable-flip-in-x == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-flip-in-x('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-flip-in-x('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-flip-in-x('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-flip-in-x();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

@@ -1,0 +1,41 @@
+$keyframe-name: $name-zoom-out-down;
+$class-name: namespace($name-zoom-out-down);
+
+@mixin animate-zoom-out-down($prefix: '') {
+    40% {
+        opacity: 1;
+        #{$prefix}transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+        #{$prefix}animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    100% {
+        opacity: 0;
+        #{$prefix}transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+        #{$prefix}transform-origin: center bottom;
+        #{$prefix}animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+@if $enable-all-modules == true or $enable-zoom-out-down == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-zoom-out-down('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-zoom-out-down('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-zoom-out-down('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-zoom-out-down();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

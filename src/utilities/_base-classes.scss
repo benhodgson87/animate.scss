@@ -1,0 +1,35 @@
+.#{$name-base} {
+    @if $enable-prefixes == true {
+        -webkit-animation-duration: $default-animation-duration;
+        -moz-animation-duration: $default-animation-duration;
+        -o-animation-duration: $default-animation-duration;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+    }
+
+    animation-duration: $default-animation-duration;
+    animation-fill-mode: both;
+}
+
+.#{$name-base}.infinite {
+    @if $enable-prefixes == true {
+        -webkit-animation-iteration-count: $default-iteration-count;
+        -moz-animation-iteration-count: $default-iteration-count;
+        -o-animation-iteration-count: $default-iteration-count;
+    }
+
+    animation-iteration-count: $default-iteration-count;
+}
+
+.#{$name-base}.#{$name-hinge} {
+    $hinge-duration: $default-animation-duration * 2;
+
+    @if $enable-prefixes == true {
+        -webkit-animation-duration: $hinge-duration;
+        -moz-animation-duration: $hinge-duration;
+        -o-animation-duration: $hinge-duration;
+    }
+
+    animation-duration: $hinge-duration;
+}

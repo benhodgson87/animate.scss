@@ -1,0 +1,39 @@
+$keyframe-name: $name-fade-in-left;
+$class-name: namespace($name-fade-in-left);
+
+@mixin animate-fade-in-left($prefix: '') {
+    0% {
+        opacity: 0;
+        #{$prefix}transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        #{$prefix}transform: none;
+    }
+}
+
+@if $enable-all-modules == true or $enable-fade-in-left == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-fade-in-left('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-fade-in-left('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-fade-in-left('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-fade-in-left();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

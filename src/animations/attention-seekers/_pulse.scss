@@ -1,0 +1,41 @@
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+$keyframe-name: $name-pulse;
+$class-name: namespace($name-pulse);
+
+@mixin animate-pulse($prefix: '') {
+    0% {
+        #{$prefix}transform: scale3d(1, 1, 1);
+    }
+    50% {
+        #{$prefix}transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        #{$prefix}transform: scale3d(1, 1, 1);
+    }
+}
+
+@if $enable-all-modules == true or $enable-pulse == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-pulse('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-pulse('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-pulse('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-pulse();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

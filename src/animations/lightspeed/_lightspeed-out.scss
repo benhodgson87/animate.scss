@@ -1,0 +1,38 @@
+$keyframe-name: $name-lightspeed-out;
+$class-name: namespace($name-lightspeed-out);
+
+@mixin animate-lightspeed-out($prefix: '') {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        #{$prefix}transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-lightspeed-out == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-out('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-out('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-out('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-lightspeed-out();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

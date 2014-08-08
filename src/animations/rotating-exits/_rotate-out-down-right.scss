@@ -1,0 +1,40 @@
+$keyframe-name: $name-rotate-out-down-right;
+$class-name: namespace($name-rotate-out-down-right);
+
+@mixin animate-rotate-out-down-right($prefix: '') {
+    0% {
+        #{$prefix}transform-origin: right bottom;
+        opacity: 1;
+    }
+
+    100% {
+        #{$prefix}transform-origin: right bottom;
+        #{$prefix}transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-rotate-out-down-right == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-rotate-out-down-right('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-rotate-out-down-right('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-rotate-out-down-right('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-rotate-out-down-right();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

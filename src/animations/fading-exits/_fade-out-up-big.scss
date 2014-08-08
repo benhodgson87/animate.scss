@@ -1,0 +1,38 @@
+$keyframe-name: $name-fade-out-up-big;
+$class-name: namespace($name-fade-out-up-big);
+
+@mixin animate-fade-out-up-big($prefix: '') {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        #{$prefix}transform: translate3d(0, -2000px, 0);
+    }
+}
+
+@if $enable-all-modules == true or $enable-fade-out-up-big == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-fade-out-up-big('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-fade-out-up-big('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-fade-out-up-big('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-fade-out-up-big();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

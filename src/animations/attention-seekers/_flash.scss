@@ -1,0 +1,18 @@
+$keyframe-name: $name-flash;
+$class-name: namespace($name-flash);
+
+@if $enable-all-modules == true or $enable-flash == true {
+
+    @include animate-keyframe($keyframe-name) {
+        0%, 50%, 100% {
+            opacity: 1;
+        }
+        25%, 75% {
+            opacity: 0;
+        }
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+}

@@ -1,0 +1,37 @@
+$keyframe-name: $name-zoom-in;
+$class-name: namespace($name-zoom-in);
+
+@mixin animate-zoom-in($prefix: '') {
+    0% {
+        opacity: 0;
+        #{$prefix}transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@if $enable-all-modules == true or $enable-zoom-in == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-zoom-in('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-zoom-in('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-zoom-in('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-zoom-in();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

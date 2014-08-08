@@ -1,0 +1,18 @@
+$keyframe-name: $name-fade-in;
+$class-name: namespace($name-fade-in);
+
+@if $enable-all-modules == true or $enable-fade-in == true {
+
+    @include animate-keyframe($keyframe-name) {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+}

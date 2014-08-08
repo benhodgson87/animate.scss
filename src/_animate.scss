@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/**
+ * Animate.scss
+ *
+ * Based on Animate.css by Dan Eden (@_dte)
+ * Ported to Sass by Ben Hodgson (@benhodgson)
+ *
+ * Hat-Tip to tgdev/animate-sass for inspiration
+ */
+
+
+// Grab the settings
+@import 'settings/main',
+        'settings/names';
+
+
+// Import Utilities
+@import 'utilities/functions',
+        'utilities/mixins';
+
+
+// Import animation modules
+@import 'animations/attention-seekers/all',
+        'animations/bouncing-entrances/all',
+        'animations/bouncing-exits/all',
+        'animations/fading-entrances/all',
+        'animations/fading-exits/all',
+        'animations/flippers/all',
+        'animations/lightspeed/all',
+        'animations/rotating-entrances/all',
+        'animations/rotating-exits/all',
+        'animations/special/all',
+        'animations/zooming-entrances/all',
+        'animations/zooming-exits/all';
+
+
+// Import base animation classes
+@import 'utilities/base-classes';

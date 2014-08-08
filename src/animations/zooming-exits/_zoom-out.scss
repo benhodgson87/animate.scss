@@ -1,0 +1,40 @@
+$keyframe-name: $name-zoom-out;
+$class-name: namespace($name-zoom-out);
+
+@mixin animate-zoom-out($prefix: '') {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        #{$prefix}transform: scale3d(.3, .3, .3);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@if $enable-all-modules == true or $enable-zoom-out == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-zoom-out('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-zoom-out('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-zoom-out('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-zoom-out();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

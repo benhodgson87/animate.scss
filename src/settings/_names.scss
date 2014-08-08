@@ -1,0 +1,122 @@
+// ************************************************************************
+//
+// Animate.scss
+// Animation Name Settings
+//
+// Set the generated class names & keyframe identifiers for the animations
+// Allows you to change between hyphenated, camelCase or whatever suits you
+//
+// ************************************************************************
+
+
+// Base Class Name
+// Used for the classes that must be set alongside every animation
+$name-base                  : 'animated'              !default;
+
+
+// Namespace Prefix
+// Prefixes a string to all animation class names
+// Useful for BEM naming (eg. 'animate--' makes '.animate--bounce-in')
+$name-prefix                : ''                      !default;
+
+
+// Attention Seekers
+$name-bounce                : 'bounce'                !default;
+$name-flash                 : 'flash'                 !default;
+$name-pulse                 : 'pulse'                 !default;
+$name-rubber-band           : 'rubber-band'           !default;
+$name-shake                 : 'shake'                 !default;
+$name-swing                 : 'swing'                 !default;
+$name-tada                  : 'tada'                  !default;
+$name-wobble                : 'wobble'                !default;
+
+
+// Bouncing Entrances
+$name-bounce-in             : 'bounce-in'             !default;
+$name-bounce-in-down        : 'bounce-in-down'        !default;
+$name-bounce-in-left        : 'bounce-in-left'        !default;
+$name-bounce-in-right       : 'bounce-in-right'       !default;
+$name-bounce-in-up          : 'bounce-in-up'          !default;
+
+
+// Bouncing Exits
+$name-bounce-out            : 'bounce-out'            !default;
+$name-bounce-out-down       : 'bounce-out-down'       !default;
+$name-bounce-out-left       : 'bounce-out-left'       !default;
+$name-bounce-out-right      : 'bounce-out-right'      !default;
+$name-bounce-out-up         : 'bounce-out-up'         !default;
+
+
+// Fading Entrances
+$name-fade-in               : 'fade-in'               !default;
+$name-fade-in-down          : 'fade-in-down'          !default;
+$name-fade-in-down-big      : 'fade-in-down-big'      !default;
+$name-fade-in-left          : 'fade-in-left'          !default;
+$name-fade-in-left-big      : 'fade-in-left-big'      !default;
+$name-fade-in-right         : 'fade-in-right'         !default;
+$name-fade-in-right-big     : 'fade-in-right-big'     !default;
+$name-fade-in-up            : 'fade-in-up'            !default;
+$name-fade-in-up-big        : 'fade-in-up-big'        !default;
+
+
+// Flips
+$name-flip                  : 'flip'                  !default;
+$name-flip-in-x             : 'flip-in-x'             !default;
+$name-flip-in-y             : 'flip-in-y'             !default;
+$name-flip-out-x            : 'flip-out-x'            !default;
+$name-flip-out-y            : 'flip-out-y'            !default;
+
+
+// Lightspeed
+$name-lightspeed-in         : 'lightspeed-in'         !default;
+$name-lightspeed-out        : 'lightspeed-out'        !default;
+
+
+// Fading Exits
+$name-fade-out              : 'fade-out'              !default;
+$name-fade-out-down         : 'fade-out-down'         !default;
+$name-fade-out-down-big     : 'fade-out-down-big'     !default;
+$name-fade-out-left         : 'fade-out-left'         !default;
+$name-fade-out-left-big     : 'fade-out-left-big'     !default;
+$name-fade-out-right        : 'fade-out-right'        !default;
+$name-fade-out-right-big    : 'fade-out-right-big'    !default;
+$name-fade-out-up           : 'fade-out-up'           !default;
+$name-fade-out-up-big       : 'fade-out-up-big'       !default;
+
+
+// Rotating Entrances
+$name-rotate-in             : 'rotate-in'             !default;
+$name-rotate-in-down-left   : 'rotate-in-down-left'   !default;
+$name-rotate-in-down-right  : 'rotate-in-down-right'  !default;
+$name-rotate-in-up-left     : 'rotate-in-up-left'     !default;
+$name-rotate-in-up-right    : 'rotate-in-up-right'    !default;
+
+
+// Rotating Exits
+$name-rotate-out            : 'rotate-out'            !default;
+$name-rotate-out-down-left  : 'rotate-out-down-left'  !default;
+$name-rotate-out-down-right : 'rotate-out-down-right' !default;
+$name-rotate-out-up-left    : 'rotate-out-up-left'    !default;
+$name-rotate-out-up-right   : 'rotate-out-up-right'   !default;
+
+
+// Special
+$name-hinge                 : 'hinge'                 !default;
+$name-roll-in               : 'roll-in'               !default;
+$name-roll-out              : 'roll-out'              !default;
+
+
+// Zooming Entrances
+$name-zoom-in               : 'zoom-in'               !default;
+$name-zoom-in-down          : 'zoom-in-down'          !default;
+$name-zoom-in-left          : 'zoom-in-left'          !default;
+$name-zoom-in-right         : 'zoom-in-right'         !default;
+$name-zoom-in-up            : 'zoom-in-up'            !default;
+
+
+// Zooming Exits
+$name-zoom-out              : 'zoom-out'              !default;
+$name-zoom-out-down         : 'zoom-out-down'         !default;
+$name-zoom-out-left         : 'zoom-out-left'         !default;
+$name-zoom-out-right        : 'zoom-out-right'        !default;
+$name-zoom-out-up           : 'zoom-out-up'           !default;

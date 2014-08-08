@@ -1,0 +1,51 @@
+$keyframe-name: $name-rubber-band;
+$class-name: namespace($name-rubber-band);
+
+@mixin animate-rubber-band($prefix: '') {
+    0% {
+        #{$prefix}transform: scale3d(1, 1, 1);
+    }
+    30% {
+        #{$prefix}transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        #{$prefix}transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        #{$prefix}transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        #{$prefix}transform: scale3d(.95, 1.05, 1);
+    }
+    75% {
+        #{$prefix}transform: scale3d(1.05, .95, 1);
+    }
+    100% {
+        #{$prefix}transform: scale3d(1, 1, 1);
+    }
+}
+
+@if $enable-all-modules == true or $enable-rubber-band == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-rubber-band('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-rubber-band('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-rubber-band('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-rubber-band();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

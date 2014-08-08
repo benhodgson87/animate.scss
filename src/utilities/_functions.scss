@@ -1,0 +1,10 @@
+//
+// Animate.scss
+// Sass Functions
+//
+
+
+// Create a namespaced class name
+@function namespace($name) {
+    @return $name-prefix + $name;
+}

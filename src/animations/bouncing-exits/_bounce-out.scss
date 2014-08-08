@@ -1,0 +1,41 @@
+$keyframe-name: $name-bounce-out;
+$class-name: namespace($name-bounce-out);
+
+@mixin animate-bounce-out($prefix: '') {
+    20% {
+        #{$prefix}transform: scale3d(.9, .9, .9);
+    }
+    50%, 55% {
+        opacity: 1;
+        #{$prefix}transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        opacity: 0;
+        #{$prefix}transform: scale3d(.3, .3, .3);
+    }
+}
+
+@if $enable-all-modules == true or $enable-bounce-out == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-bounce-out('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-bounce-out('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-bounce-out('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-bounce-out();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

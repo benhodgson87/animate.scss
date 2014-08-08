@@ -1,0 +1,54 @@
+$keyframe-name: $name-flip;
+$class-name: namespace($name-flip);
+
+@mixin animate-flip($prefix: '') {
+    0% {
+        #{$prefix}transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        #{$prefix}animation-timing-function: ease-out;
+    }
+
+    40% {
+        #{$prefix}transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        #{$prefix}animation-timing-function: ease-out;
+    }
+
+    50% {
+        #{$prefix}transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        #{$prefix}animation-timing-function: ease-in;
+    }
+
+    80% {
+        #{$prefix}transform: perspective(400px) scale3d(.95, .95, .95);
+        #{$prefix}animation-timing-function: ease-in;
+    }
+
+    100% {
+        #{$prefix}transform: perspective(400px);
+        #{$prefix}animation-timing-function: ease-in;
+    }
+}
+
+@if $enable-all-modules == true or $enable-flip == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-flip('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-flip('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-flip('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-flip();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

@@ -1,0 +1,53 @@
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+$keyframe-name: $name-wobble;
+$class-name: namespace($name-wobble);
+
+@mixin animate-wobble($prefix: '') {
+    0% {
+        #{$prefix}transform: none;
+    }
+    15% {
+        #{$prefix}transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+        #{$prefix}transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+        #{$prefix}transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        #{$prefix}transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+        #{$prefix}transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    100% {
+        #{$prefix}transform: none;
+    }
+}
+
+@if $enable-all-modules == true or $enable-wobble == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-wobble('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-wobble('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-wobble('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-wobble();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

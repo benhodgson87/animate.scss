@@ -1,0 +1,41 @@
+$keyframe-name: $name-rotate-in-up-left;
+$class-name: namespace($name-rotate-in-up-left);
+
+@mixin animate-rotate-in-up-left($prefix: '') {
+    0% {
+        #{$prefix}transform-origin: left bottom;
+        #{$prefix}transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    100% {
+        #{$prefix}transform-origin: left bottom;
+        #{$prefix}transform: none;
+        opacity: 1;
+    }
+}
+
+@if $enable-all-modules == true or $enable-rotate-in-up-left == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-rotate-in-up-left('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-rotate-in-up-left('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-rotate-in-up-left('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-rotate-in-up-left();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

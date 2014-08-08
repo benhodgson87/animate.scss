@@ -1,0 +1,49 @@
+$keyframe-name: $name-lightspeed-in;
+$class-name: namespace($name-lightspeed-in);
+
+@mixin animate-lightspeed-in($prefix: '') {
+    0% {
+        #{$prefix}transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+
+    60% {
+        #{$prefix}transform: skewX(20deg);
+        opacity: 1;
+    }
+
+    80% {
+        #{$prefix}transform: skewX(-5deg);
+        opacity: 1;
+    }
+
+    100% {
+        #{$prefix}transform: none;
+        opacity: 1;
+    }
+}
+
+@if $enable-all-modules == true or $enable-lightspeed-in == true {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-in('-webkit-');
+        }
+
+        @-moz-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-in('-moz-');
+        }
+
+        @-o-keyframes #{$keyframe-name} {
+            @include animate-lightspeed-in('-o-');
+        }
+    }
+
+    @keyframes #{$keyframe-name} {
+        @include animate-lightspeed-in();
+    }
+
+    .#{$class-name} {
+        @include animate-prefixer(animation-name, $keyframe-name);
+    }
+
+}

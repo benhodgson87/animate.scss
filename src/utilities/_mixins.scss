@@ -1,0 +1,29 @@
+@mixin animate-prefixer($property, $value...) {
+    @if $enable-prefixes == true {
+        -webkit-#{$property}:$value;
+           -moz-#{$property}:$value;
+             -o-#{$property}:$value;
+    }
+            #{$property}:$value;
+}
+
+// by @integralist
+@mixin animate-keyframe($animation-name) {
+    @if $enable-prefixes == true {
+        @-webkit-keyframes #{$animation-name} {
+            @content;
+        }
+
+        @-moz-keyframes #{$animation-name} {
+            @content;
+        }
+
+        @-o-keyframes #{$animation-name} {
+            @content;
+        }
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
