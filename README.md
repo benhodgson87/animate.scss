@@ -12,7 +12,7 @@ Offers feature parity to version 3.2
 #### Bower
 
 Install by running:
-```bower install sass-animate```
+```bower install animate-scss```
 
 
 ## Customisation Options
