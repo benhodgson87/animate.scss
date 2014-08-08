@@ -12,10 +12,9 @@ ___TODO:___ _Better documentation. It's coming._
 
 ## Installing
 
-Either clone this repo, or install with Bower by running:
 ```bower install animate-scss```
 
-Once installed, ```@import``` the ```src/_animate.scss``` file into your own project, setting any variable overrides that need to be pulled in beforehand.
+Once installed, ```@import src/_animate``` file from your bower_components folder into your own project (adjusting the path to the import as necessary). Be sure to set any variable overrides beforehand.
 
 
 ## Customisation Options
