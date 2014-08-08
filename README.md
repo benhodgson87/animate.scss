@@ -2,7 +2,7 @@
 
 A powerful, highly customisable SCSS port of Dan Eden's animate.css library.
 
-https://github.com/daneden/animate.css
+http://daneden.github.io/animate.css/
 
 Offers feature parity to version 3.2
 
