@@ -6,7 +6,7 @@
     "_resolution": {
         "type": "version",
         "tag": "v.1.0.0",
-        "commit": "c6cc131d7f3e6808b4bd226a8dd66eb676fd752a"
+        "commit": "4ae39ff839db0d51b510da671724784dff96b12c"
     },
     "_source": "git://github.com/benhodgson87/animate.scss.git",
     "_target": "~1.0.0",
