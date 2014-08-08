@@ -4,8 +4,7 @@ A powerful, highly customisable SCSS port of Dan Eden's animate.scss library.
 
 https://github.com/daneden/animate.css
 
-Offers feature parity to version 3.2, and borrows heavily from Tom Gillard/tgdev's
-port at https://github.com/tgdev/animate-sass
+Offers feature parity to version 3.2
 
 
 ## Installing
