@@ -16,15 +16,15 @@ $class-name: namespace($name-zoom-out-right);
 @if $enable-all-modules == true or $enable-zoom-out-right == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-right('-webkit-');
+            @include animate-zoom-out-right($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-right('-moz-');
+            @include animate-zoom-out-right($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-right('-o-');
+            @include animate-zoom-out-right($prefix-opera);
         }
     }
 

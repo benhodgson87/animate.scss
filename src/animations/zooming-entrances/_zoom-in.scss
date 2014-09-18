@@ -14,15 +14,15 @@ $class-name: namespace($name-zoom-in);
 @if $enable-all-modules == true or $enable-zoom-in == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-in('-webkit-');
+            @include animate-zoom-in($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-in('-moz-');
+            @include animate-zoom-in($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-in('-o-');
+            @include animate-zoom-in($prefix-opera);
         }
     }
 

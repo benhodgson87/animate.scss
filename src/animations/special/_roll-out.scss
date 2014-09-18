@@ -16,15 +16,15 @@ $class-name: namespace($name-roll-out);
 @if $enable-all-modules == true or $enable-roll-out == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-roll-out('-webkit-');
+            @include animate-roll-out($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-roll-out('-moz-');
+            @include animate-roll-out($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-roll-out('-o-');
+            @include animate-roll-out($prefix-opera);
         }
     }
 

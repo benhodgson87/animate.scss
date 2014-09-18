@@ -17,15 +17,15 @@ $class-name: namespace($name-rotate-out-up-left);
 @if $enable-all-modules == true or $enable-rotate-out-up-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rotate-out-up-left('-webkit-');
+            @include animate-rotate-out-up-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rotate-out-up-left('-moz-');
+            @include animate-rotate-out-up-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rotate-out-up-left('-o-');
+            @include animate-rotate-out-up-left($prefix-opera);
         }
     }
 

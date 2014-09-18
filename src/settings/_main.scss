@@ -16,6 +16,13 @@ $enable-prefixes              : false !default;
 
 
 
+// VENDOR PREFIX TYPES
+$prefix-webkit: '-webkit-';
+$prefix-moz: '-moz-';
+$prefix-opera: '-o-';
+
+
+
 // ANIMATION DEFAULTS
 $default-animation-duration   : 1s !default;
 $default-iteration-count      : infinite !default;

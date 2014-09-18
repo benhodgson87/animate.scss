@@ -32,15 +32,15 @@ $class-name: namespace($name-bounce-in-up);
 @if $enable-all-modules == true or $enable-bounce-in-up == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-up('-webkit-');
+            @include animate-bounce-in-up($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-up('-moz-');
+            @include animate-bounce-in-up($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-up('-o-');
+            @include animate-bounce-in-up($prefix-opera);
         }
     }
 

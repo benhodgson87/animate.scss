@@ -18,15 +18,15 @@ $class-name: namespace($name-zoom-out-down);
 @if $enable-all-modules == true or $enable-zoom-out-down == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-down('-webkit-');
+            @include animate-zoom-out-down($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-down('-moz-');
+            @include animate-zoom-out-down($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-out-down('-o-');
+            @include animate-zoom-out-down($prefix-opera);
         }
     }
 

@@ -16,15 +16,15 @@ $class-name: namespace($name-fade-in-up-big);
 @if $enable-all-modules == true or $enable-fade-in-up-big == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up-big('-webkit-');
+            @include animate-fade-in-up-big($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up-big('-moz-');
+            @include animate-fade-in-up-big($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up-big('-o-');
+            @include animate-fade-in-up-big($prefix-opera);
         }
     }
 

@@ -30,15 +30,15 @@ $class-name: namespace($name-flip-in-y);
 @if $enable-all-modules == true or $enable-flip-in-y == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-flip-in-y('-webkit-');
+            @include animate-flip-in-y($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-flip-in-y('-moz-');
+            @include animate-flip-in-y($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-flip-in-y('-o-');
+            @include animate-flip-in-y($prefix-opera);
         }
     }
 

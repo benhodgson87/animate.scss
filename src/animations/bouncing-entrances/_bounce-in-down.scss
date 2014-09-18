@@ -27,15 +27,15 @@ $class-name: namespace($name-bounce-in-down);
 @if $enable-all-modules == true or $enable-bounce-in-down == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-down('-webkit-');
+            @include animate-bounce-in-down($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-down('-moz-');
+            @include animate-bounce-in-down($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-down('-o-');
+            @include animate-bounce-in-down($prefix-opera);
         }
     }
 

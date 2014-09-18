@@ -20,15 +20,15 @@ $class-name: namespace($name-bounce-out-down);
 @if $enable-all-modules == true or $enable-bounce-out-down == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-down('-webkit-');
+            @include animate-bounce-out-down($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-down('-moz-');
+            @include animate-bounce-out-down($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-down('-o-');
+            @include animate-bounce-out-down($prefix-opera);
         }
     }
 

@@ -30,15 +30,15 @@ $class-name: namespace($name-wobble);
 @if $enable-all-modules == true or $enable-wobble == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-wobble('-webkit-');
+            @include animate-wobble($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-wobble('-moz-');
+            @include animate-wobble($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-wobble('-o-');
+            @include animate-wobble($prefix-opera);
         }
     }
 

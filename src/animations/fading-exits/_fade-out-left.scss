@@ -15,15 +15,15 @@ $class-name: namespace($name-fade-out-left);
 @if $enable-all-modules == true or $enable-fade-out-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-out-left('-webkit-');
+            @include animate-fade-out-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-out-left('-moz-');
+            @include animate-fade-out-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-out-left('-o-');
+            @include animate-fade-out-left($prefix-opera);
         }
     }
 

@@ -22,15 +22,15 @@ $class-name: namespace($name-swing);
 @if $enable-all-modules == true or $enable-swing == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-swing('-webkit-');
+            @include animate-swing($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-swing('-moz-');
+            @include animate-swing($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-swing('-o-');
+            @include animate-swing($prefix-opera);
         }
     }
 

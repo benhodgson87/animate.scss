@@ -18,15 +18,15 @@ $class-name: namespace($name-rotate-in-up-left);
 @if $enable-all-modules == true or $enable-rotate-in-up-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-up-left('-webkit-');
+            @include animate-rotate-in-up-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-up-left('-moz-');
+            @include animate-rotate-in-up-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-up-left('-o-');
+            @include animate-rotate-in-up-left($prefix-opera);
         }
     }
 

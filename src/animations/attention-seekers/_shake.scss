@@ -16,15 +16,15 @@ $class-name: namespace($name-shake);
 @if $enable-all-modules == true or $enable-shake == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-shake('-webkit-');
+            @include animate-shake($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-shake('-moz-');
+            @include animate-shake($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-shake('-o-');
+            @include animate-shake($prefix-opera);
         }
     }
 

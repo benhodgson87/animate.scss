@@ -22,15 +22,15 @@ $class-name: namespace($name-tada);
 @if $enable-all-modules == true or $enable-tada == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animation-tada('-webkit-');
+            @include animation-tada($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animation-tada('-moz-');
+            @include animation-tada($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animation-tada('-o-');
+            @include animation-tada($prefix-opera);
         }
     }
 

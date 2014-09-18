@@ -17,15 +17,15 @@ $class-name: namespace($name-zoom-in-up);
 @if $enable-all-modules == true or $enable-zoom-in-up == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-up('-webkit-');
+            @include animate-zoom-in-up($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-up('-moz-');
+            @include animate-zoom-in-up($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-up('-o-');
+            @include animate-zoom-in-up($prefix-opera);
         }
     }
 

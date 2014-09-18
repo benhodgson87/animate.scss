@@ -16,15 +16,15 @@ $class-name: namespace($name-fade-in-left-big);
 @if $enable-all-modules == true or $enable-fade-in-left-big == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left-big('-webkit-');
+            @include animate-fade-in-left-big($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left-big('-moz-');
+            @include animate-fade-in-left-big($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left-big('-o-');
+            @include animate-fade-in-left-big($prefix-opera);
         }
     }
 

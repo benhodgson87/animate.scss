@@ -17,15 +17,15 @@ $class-name: namespace($name-zoom-out);
 @if $enable-all-modules == true or $enable-zoom-out == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-out('-webkit-');
+            @include animate-zoom-out($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-out('-moz-');
+            @include animate-zoom-out($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-out('-o-');
+            @include animate-zoom-out($prefix-opera);
         }
     }
 

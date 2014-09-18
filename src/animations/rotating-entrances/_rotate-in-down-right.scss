@@ -18,15 +18,15 @@ $class-name: namespace($name-rotate-in-down-right);
 @if $enable-all-modules == true or $enable-rotate-in-down-right == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-down-right('-webkit-');
+            @include animate-rotate-in-down-right($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-down-right('-moz-');
+            @include animate-rotate-in-down-right($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rotate-in-down-right('-o-');
+            @include animate-rotate-in-down-right($prefix-opera);
         }
     }
 
