@@ -16,15 +16,15 @@ $class-name: namespace($name-fade-in-up);
 @if $enable-all-modules == true or $enable-fade-in-up == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up('-webkit-');
+            @include animate-fade-in-up($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up('-moz-');
+            @include animate-fade-in-up($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-in-up('-o-');
+            @include animate-fade-in-up($prefix-opera);
         }
     }
 

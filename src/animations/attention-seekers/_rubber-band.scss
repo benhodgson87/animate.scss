@@ -28,15 +28,15 @@ $class-name: namespace($name-rubber-band);
 @if $enable-all-modules == true or $enable-rubber-band == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rubber-band('-webkit-');
+            @include animate-rubber-band($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rubber-band('-moz-');
+            @include animate-rubber-band($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rubber-band('-o-');
+            @include animate-rubber-band($prefix-opera);
         }
     }
 

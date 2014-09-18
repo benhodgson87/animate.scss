@@ -20,15 +20,15 @@ $class-name: namespace($name-flip-out-y);
 @if $enable-all-modules == true or $enable-flip-out-y == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-flip-out-y('-webkit-');
+            @include animate-flip-out-y($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-flip-out-y('-moz-');
+            @include animate-flip-out-y($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-flip-out-y('-o-');
+            @include animate-flip-out-y($prefix-opera);
         }
     }
 

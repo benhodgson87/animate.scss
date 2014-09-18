@@ -31,15 +31,15 @@ $class-name: namespace($name-bounce-in);
 @if $enable-all-modules == true or $enable-bounce-in == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-in('-webkit-');
+            @include animate-bounce-in($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-in('-moz-');
+            @include animate-bounce-in($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-in('-o-');
+            @include animate-bounce-in($prefix-opera);
         }
     }
 

@@ -15,15 +15,15 @@ $class-name: namespace($name-lightspeed-out);
 @if $enable-all-modules == true or $enable-lightspeed-out == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-out('-webkit-');
+            @include animate-lightspeed-out($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-out('-moz-');
+            @include animate-lightspeed-out($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-out('-o-');
+            @include animate-lightspeed-out($prefix-opera);
         }
     }
 

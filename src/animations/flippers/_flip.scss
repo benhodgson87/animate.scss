@@ -31,15 +31,15 @@ $class-name: namespace($name-flip);
 @if $enable-all-modules == true or $enable-flip == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-flip('-webkit-');
+            @include animate-flip($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-flip('-moz-');
+            @include animate-flip($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-flip('-o-');
+            @include animate-flip($prefix-opera);
         }
     }
 

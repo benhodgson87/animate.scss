@@ -17,15 +17,15 @@ $class-name: namespace($name-roll-in);
 @if $enable-all-modules == true or $enable-roll-in == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-roll-in('-webkit-');
+            @include animate-roll-in($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-roll-in('-moz-');
+            @include animate-roll-in($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-roll-in('-o-');
+            @include animate-roll-in($prefix-opera);
         }
     }
 

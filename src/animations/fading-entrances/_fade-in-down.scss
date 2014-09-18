@@ -16,15 +16,15 @@ $class-name: namespace($name-fade-in-down);
 @if $enable-all-modules == true or $enable-fade-in-down == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-in-down('-webkit-');
+            @include animate-fade-in-down($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-in-down('-moz-');
+            @include animate-fade-in-down($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-in-down('-o-');
+            @include animate-fade-in-down($prefix-opera);
         }
     }
 

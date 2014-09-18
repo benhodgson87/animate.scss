@@ -27,15 +27,15 @@ $class-name: namespace($name-bounce-in-left);
 @if $enable-all-modules == true or $enable-bounce-in-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-left('-webkit-');
+            @include animate-bounce-in-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-left('-moz-');
+            @include animate-bounce-in-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-in-left('-o-');
+            @include animate-bounce-in-left($prefix-opera);
         }
     }
 

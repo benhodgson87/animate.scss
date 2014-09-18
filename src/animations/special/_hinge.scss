@@ -26,15 +26,15 @@ $class-name: namespace($name-hinge);
 @if $enable-all-modules == true or $enable-hinge == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-hinge('-webkit-');
+            @include animate-hinge($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-hinge('-moz-');
+            @include animate-hinge($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-hinge('-o-');
+            @include animate-hinge($prefix-opera);
         }
     }
 

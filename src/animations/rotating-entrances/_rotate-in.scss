@@ -18,15 +18,15 @@ $class-name: namespace($name-rotate-in);
 @if $enable-all-modules == true or $enable-rotate-in == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rotate-in('-webkit-');
+            @include animate-rotate-in($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rotate-in('-moz-');
+            @include animate-rotate-in($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rotate-in('-o-');
+            @include animate-rotate-in($prefix-opera);
         }
     }
 

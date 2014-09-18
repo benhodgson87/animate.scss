@@ -17,15 +17,15 @@ $class-name: namespace($name-zoom-in-left);
 @if $enable-all-modules == true or $enable-zoom-in-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-left('-webkit-');
+            @include animate-zoom-in-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-left('-moz-');
+            @include animate-zoom-in-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-zoom-in-left('-o-');
+            @include animate-zoom-in-left($prefix-opera);
         }
     }
 

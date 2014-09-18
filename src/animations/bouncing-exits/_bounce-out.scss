@@ -18,15 +18,15 @@ $class-name: namespace($name-bounce-out);
 @if $enable-all-modules == true or $enable-bounce-out == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-out('-webkit-');
+            @include animate-bounce-out($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-out('-moz-');
+            @include animate-bounce-out($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-out('-o-');
+            @include animate-bounce-out($prefix-opera);
         }
     }
 

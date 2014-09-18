@@ -18,15 +18,15 @@ $class-name: namespace($name-pulse);
 @if $enable-all-modules == true or $enable-pulse == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-pulse('-webkit-');
+            @include animate-pulse($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-pulse('-moz-');
+            @include animate-pulse($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-pulse('-o-');
+            @include animate-pulse($prefix-opera);
         }
     }
 

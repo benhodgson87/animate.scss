@@ -15,15 +15,15 @@ $class-name: namespace($name-bounce-out-left);
 @if $enable-all-modules == true or $enable-bounce-out-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-left('-webkit-');
+            @include animate-bounce-out-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-left('-moz-');
+            @include animate-bounce-out-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-bounce-out-left('-o-');
+            @include animate-bounce-out-left($prefix-opera);
         }
     }
 

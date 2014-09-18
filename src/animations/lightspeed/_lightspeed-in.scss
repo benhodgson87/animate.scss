@@ -26,15 +26,15 @@ $class-name: namespace($name-lightspeed-in);
 @if $enable-all-modules == true or $enable-lightspeed-in == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-in('-webkit-');
+            @include animate-lightspeed-in($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-in('-moz-');
+            @include animate-lightspeed-in($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-lightspeed-in('-o-');
+            @include animate-lightspeed-in($prefix-opera);
         }
     }
 

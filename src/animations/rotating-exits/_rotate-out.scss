@@ -17,15 +17,15 @@ $class-name: namespace($name-rotate-out);
 @if $enable-all-modules == true or $enable-rotate-out == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-rotate-out('-webkit-');
+            @include animate-rotate-out($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-rotate-out('-moz-');
+            @include animate-rotate-out($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-rotate-out('-o-');
+            @include animate-rotate-out($prefix-opera);
         }
     }
 

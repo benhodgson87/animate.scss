@@ -16,15 +16,15 @@ $class-name: namespace($name-fade-in-left);
 @if $enable-all-modules == true or $enable-fade-in-left == true {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left('-webkit-');
+            @include animate-fade-in-left($prefix-webkit);
         }
 
         @-moz-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left('-moz-');
+            @include animate-fade-in-left($prefix-moz);
         }
 
         @-o-keyframes #{$keyframe-name} {
-            @include animate-fade-in-left('-o-');
+            @include animate-fade-in-left($prefix-opera);
         }
     }
 
