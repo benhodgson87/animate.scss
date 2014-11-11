@@ -4,7 +4,6 @@
 // Common Settings
 //
 // A set of base settings used throughout the app
-// Many of these are parents of other variables used at file level
 //
 // ***************************************************************
 
@@ -12,16 +11,16 @@
 // USE VENDOR PREFIXES?
 // Set this to true if you want vendor prefixes for webkit, mozilla, and opera
 // Leave this false if you're already using something awesome like Autoprefixer
-$enable-prefixes              : false !default;
+$enable-prefixes: false !default;
 
 
 // VENDOR PREFIX TYPES
 $prefix-webkit: '-webkit-';
-$prefix-moz: '-moz-';
-$prefix-opera: '-o-';
+$prefix-moz:    '-moz-';
+$prefix-opera:  '-o-';
 
 
 
 // ANIMATION DEFAULTS
-$default-animation-duration   : 1s !default;
-$default-iteration-count      : infinite !default;
+$default-animation-duration: 1s !default;
+$default-iteration-count:    infinite !default;
