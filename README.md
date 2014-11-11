@@ -9,6 +9,8 @@ Offers feature parity to version 3.2
 
 ## Installing
 
+Clone this repo, or use [Bower](http://bower.io):
+
 ```bower install animate-scss```
 
 Once installed, import the main animate SCSS file from your bower_components folder into your own project (adjusting the path to the import as necessary). Be sure to define your settings variables beforehand (see below).
