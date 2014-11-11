@@ -13,13 +13,13 @@ Clone this repo, or use [Bower](http://bower.io):
 
 ```bower install animate-scss```
 
-Once installed, import the main animate SCSS file from your bower_components folder into your own project (adjusting the path to the import as necessary). Be sure to define your settings variables beforehand (see below).
+Once installed, import the main animate SCSS file from wherever it's been saved (eg. ```bower_components```) into your own project. Be sure to define your settings variables beforehand (see below).
 
 ```scss
 $enable-zoom-in: true;
 $enable-zoom-out: true;
 
-@import '{{your_bower_path}}/_animate';
+@import '{{path_to_animate}}/_animate.scss';
 ```
 
 ## Customisation Options
