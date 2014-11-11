@@ -12,7 +12,7 @@ $class-name: namespace($name-fade-out-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-fade-out-right == true {
+@if useModule($enable-fade-out-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-fade-out-right($prefix-webkit);

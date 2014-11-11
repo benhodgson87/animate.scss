@@ -27,7 +27,7 @@ $class-name: namespace($name-flip-in-y);
     }
 }
 
-@if $enable-all-modules == true or $enable-flip-in-y == true {
+@if useModule($enable-flip-in-y) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-flip-in-y($prefix-webkit);

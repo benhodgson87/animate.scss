@@ -12,7 +12,7 @@ $class-name: namespace($name-fade-out-up-big);
     }
 }
 
-@if $enable-all-modules == true or $enable-fade-out-up-big == true {
+@if useModule($enable-fade-out-up-big) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-fade-out-up-big($prefix-webkit);

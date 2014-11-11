@@ -15,7 +15,7 @@ $class-name: namespace($name-zoom-out-down);
     }
 }
 
-@if $enable-all-modules == true or $enable-zoom-out-down == true {
+@if useModule($enable-zoom-out-down) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-zoom-out-down($prefix-webkit);

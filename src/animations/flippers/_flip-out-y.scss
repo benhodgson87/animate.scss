@@ -17,7 +17,7 @@ $class-name: namespace($name-flip-out-y);
     }
 }
 
-@if $enable-all-modules == true or $enable-flip-out-y == true {
+@if useModule($enable-flip-out-y) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-flip-out-y($prefix-webkit);

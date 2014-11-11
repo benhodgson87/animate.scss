@@ -29,7 +29,7 @@ $class-name: namespace($name-bounce-in-up);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-in-up == true {
+@if useModule($enable-bounce-in-up) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-in-up($prefix-webkit);

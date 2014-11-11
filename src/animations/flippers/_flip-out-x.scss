@@ -15,7 +15,7 @@ $class-name: namespace($name-flip-out-x);
     }
 }
 
-@if $enable-all-modules == true or $enable-flip-out-x == true {
+@if useModule($enable-flip-out-x) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-flip-out-x($prefix-webkit);

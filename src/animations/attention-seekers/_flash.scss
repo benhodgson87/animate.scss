@@ -1,7 +1,7 @@
 $keyframe-name: $name-flash;
 $class-name: namespace($name-flash);
 
-@if $enable-all-modules == true or $enable-flash == true {
+@if useModule($enable-flash) {
 
     @include animate-keyframe($keyframe-name) {
         0%, 50%, 100% {

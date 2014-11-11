@@ -8,3 +8,14 @@
 @function namespace($name) {
     @return $name-prefix + $name;
 }
+
+
+
+// Check for enabled animation modules
+@function useModule($module, $all: $enable-all-modules) {
+    @if ($all == true or $module == true) {
+        @return true;
+    }
+
+    @return false;
+}

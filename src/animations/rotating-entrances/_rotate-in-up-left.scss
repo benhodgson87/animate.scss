@@ -15,7 +15,7 @@ $class-name: namespace($name-rotate-in-up-left);
     }
 }
 
-@if $enable-all-modules == true or $enable-rotate-in-up-left == true {
+@if useModule($enable-rotate-in-up-left) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-rotate-in-up-left($prefix-webkit);

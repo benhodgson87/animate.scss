@@ -25,7 +25,7 @@ $class-name: namespace($name-rubber-band);
     }
 }
 
-@if $enable-all-modules == true or $enable-rubber-band == true {
+@if useModule($enable-rubber-band) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-rubber-band($prefix-webkit);

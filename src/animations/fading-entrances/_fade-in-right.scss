@@ -13,7 +13,7 @@ $class-name: namespace($name-fade-in-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-fade-in-right == true {
+@if useModule($enable-fade-in-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-fade-in-right($prefix-webkit);

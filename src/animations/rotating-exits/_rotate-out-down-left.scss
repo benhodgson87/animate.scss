@@ -14,7 +14,7 @@ $class-name: namespace($name-rotate-out-down-left);
     }
 }
 
-@if $enable-all-modules == true or $enable-rotate-out-down-left == true {
+@if useModule($enable-rotate-out-down-left) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-rotate-out-down-left($prefix-webkit);

@@ -13,7 +13,7 @@ $class-name: namespace($name-shake);
     }
 }
 
-@if $enable-all-modules == true or $enable-shake == true {
+@if useModule($enable-shake) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-shake($prefix-webkit);

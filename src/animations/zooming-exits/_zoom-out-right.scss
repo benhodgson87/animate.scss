@@ -13,7 +13,7 @@ $class-name: namespace($name-zoom-out-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-zoom-out-right == true {
+@if useModule($enable-zoom-out-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-zoom-out-right($prefix-webkit);

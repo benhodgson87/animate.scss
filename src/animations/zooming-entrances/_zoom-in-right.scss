@@ -14,7 +14,7 @@ $class-name: namespace($name-zoom-in-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-zoom-in-right == true {
+@if useModule($enable-zoom-in-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-zoom-in-right($prefix-webkit);

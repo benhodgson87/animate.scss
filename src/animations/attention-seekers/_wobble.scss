@@ -27,7 +27,7 @@ $class-name: namespace($name-wobble);
     }
 }
 
-@if $enable-all-modules == true or $enable-wobble == true {
+@if useModule($enable-wobble) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-wobble($prefix-webkit);

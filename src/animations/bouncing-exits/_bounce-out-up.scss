@@ -15,7 +15,7 @@ $class-name: namespace($name-bounce-out-up);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-out-up == true {
+@if useModule($enable-bounce-out-up) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-out-up($prefix-webkit);

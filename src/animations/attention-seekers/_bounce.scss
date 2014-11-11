@@ -19,7 +19,7 @@ $class-name: namespace($name-bounce);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce == true {
+@if useModule($enable-bounce) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce($prefix-webkit);

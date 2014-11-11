@@ -22,14 +22,16 @@
     animation-iteration-count: infinite;
 }
 
-.#{$name-base}.#{$name-hinge} {
-    $hinge-duration: $default-animation-duration * 2;
+@if useModule($enable-hinge) {
+    .#{$name-base}.#{$name-hinge} {
+        $hinge-duration: $default-animation-duration * 2;
 
-    @if $enable-prefixes == true {
-        -webkit-animation-duration: $hinge-duration;
-        -moz-animation-duration: $hinge-duration;
-        -o-animation-duration: $hinge-duration;
+        @if $enable-prefixes == true {
+            -webkit-animation-duration: $hinge-duration;
+            -moz-animation-duration: $hinge-duration;
+            -o-animation-duration: $hinge-duration;
+        }
+
+        animation-duration: $hinge-duration;
     }
-
-    animation-duration: $hinge-duration;
 }

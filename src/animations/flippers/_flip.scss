@@ -28,7 +28,7 @@ $class-name: namespace($name-flip);
     }
 }
 
-@if $enable-all-modules == true or $enable-flip == true {
+@if useModule($enable-flip) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-flip($prefix-webkit);
