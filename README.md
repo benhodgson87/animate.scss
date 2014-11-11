@@ -67,7 +67,7 @@ $name-prefix: 'anim--';
 // Change an animation name
 $name-bounce-in: 'tigger-enter';
 
-// Will change .bounce-in to produce
+// The output CSS for .bounce-in will become:
 .anim--tigger-enter {
   animation-name: "tigger-enter";
 }
