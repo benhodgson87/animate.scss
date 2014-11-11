@@ -7,9 +7,6 @@ http://daneden.github.io/animate.css/
 Offers feature parity to version 3.2
 
 
-___TODO:___ _Better documentation. It's coming._
-
-
 ## Installing
 
 ```bower install animate-scss```
@@ -22,11 +19,23 @@ Once installed, ```@import 'src/_animate'``` from your bower_components folder i
 #### Optional Modules
 
 All of the animations are optional, and easily switched on and off using Sass
-variables. This should result in smaller end file sizes, by only enabling the modules
+variables. This should result in smaller end file sizes, as you only need to enable the modules
 you are using.
 
-You can also override individual module level options and enable every module
-with a single variable, which may be useful for development.
+Set your enable variables _before_ importing Animate into your own stylesheet. The available module variables can be found [in the modules settings file](https://github.com/benhodgson87/animate.scss/blob/master/src/settings/_modules.scss).
+
+##### Enabling Modules
+```scss
+$enable-flip-out-y: true;
+$enable-hinge: true;
+$enable-zoom-out: true;
+```
+
+##### Enable All Modules
+While developing, it may be useful to have every module enabled. To do this you can set:
+```scss
+$enable-all-modules: true;
+```
 
 
 #### Vendor Prefixes
@@ -47,9 +56,22 @@ Mozilla, and Opera browsers.
 All animation class names are defined through a single config file, allowing you
 to alter how the output CSS classes are named.
 
-You can also prepend a namespace to all class names, giving you flexibility to use
+You can also prefix a namespace to all class names, giving you flexibility to use
 methods such as BEM, prefixing the animation type with your choice of modifier.
-eg. ```(.animation--bounce-in)```
+eg. ```(.animation--bounce-in)``` _(Note that this only affects class names, not animation names)_
+
+```scss
+// Namespace animations
+$name-prefix: 'anim--';
+
+// Change an animation name
+$name-bounce-in: 'tigger-enter';
+
+// Will change .bounce-in to produce
+.anim--tigger-enter {
+  animation-name: "tigger-enter";
+}
+```
 
 
 ## Contributing
