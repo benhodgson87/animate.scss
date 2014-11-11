@@ -57,8 +57,9 @@ All animation class names are defined through a single config file, allowing you
 to alter how the output CSS classes are named.
 
 You can also prefix a namespace to all class names, giving you flexibility to use
-methods such as BEM, prefixing the animation type with your choice of modifier.
-eg. ```(.animation--bounce-in)``` _(Note that this only affects class names, not animation names)_
+methods such as BEM, prefixing the animation class with your choice of modifier.
+eg. ```.animation--bounce-in```
+_(Note that this only affects class names, not animation names)_
 
 ```scss
 // Namespace animations
