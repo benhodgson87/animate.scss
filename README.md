@@ -61,6 +61,10 @@ methods such as BEM, prefixing the animation class with your choice of modifier.
 eg. ```.animation--bounce-in```
 _(Note that this only affects class names, not animation names)_
 
+You can find available name variables [in the name settings file](https://github.com/benhodgson87/animate.scss/blob/master/src/settings/_names.scss).
+
+##### Example
+
 ```scss
 // Namespace animations
 $name-prefix: 'anim--';
