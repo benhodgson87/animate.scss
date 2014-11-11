@@ -12,7 +12,7 @@ $class-name: namespace($name-lightspeed-out);
     }
 }
 
-@if $enable-all-modules == true or $enable-lightspeed-out == true {
+@if useModule($enable-lightspeed-out) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-lightspeed-out($prefix-webkit);

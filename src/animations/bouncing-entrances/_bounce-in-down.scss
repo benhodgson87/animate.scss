@@ -24,7 +24,7 @@ $class-name: namespace($name-bounce-in-down);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-in-down == true {
+@if useModule($enable-bounce-in-down) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-in-down($prefix-webkit);

@@ -1,7 +1,7 @@
 $keyframe-name: $name-fade-out;
 $class-name: namespace($name-fade-out);
 
-@if $enable-all-modules == true or $enable-fade-out == true {
+@if useModule($enable-fade-out) {
 
     @include animate-keyframe($keyframe-name) {
         0% {

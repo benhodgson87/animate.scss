@@ -23,7 +23,7 @@ $class-name: namespace($name-hinge);
     }
 }
 
-@if $enable-all-modules == true or $enable-hinge == true {
+@if useModule($enable-hinge) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-hinge($prefix-webkit);

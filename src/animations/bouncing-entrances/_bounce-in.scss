@@ -28,7 +28,7 @@ $class-name: namespace($name-bounce-in);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-in == true {
+@if useModule($enable-bounce-in) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-in($prefix-webkit);

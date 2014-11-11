@@ -14,7 +14,7 @@ $class-name: namespace($name-roll-in);
     }
 }
 
-@if $enable-all-modules == true or $enable-roll-in == true {
+@if useModule($enable-roll-in) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-roll-in($prefix-webkit);

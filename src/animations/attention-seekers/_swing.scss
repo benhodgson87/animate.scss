@@ -19,7 +19,7 @@ $class-name: namespace($name-swing);
     }
 }
 
-@if $enable-all-modules == true or $enable-swing == true {
+@if useModule($enable-swing) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-swing($prefix-webkit);

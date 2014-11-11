@@ -24,7 +24,7 @@ $class-name: namespace($name-bounce-in-left);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-in-left == true {
+@if useModule($enable-bounce-in-left) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-in-left($prefix-webkit);

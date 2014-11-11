@@ -15,7 +15,7 @@ $class-name: namespace($name-pulse);
     }
 }
 
-@if $enable-all-modules == true or $enable-pulse == true {
+@if useModule($enable-pulse) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-pulse($prefix-webkit);

@@ -13,7 +13,7 @@ $class-name: namespace($name-fade-in-up);
     }
 }
 
-@if $enable-all-modules == true or $enable-fade-in-up == true {
+@if useModule($enable-fade-in-up) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-fade-in-up($prefix-webkit);

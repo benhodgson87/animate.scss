@@ -29,7 +29,7 @@ $class-name: namespace($name-bounce-in-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-in-right == true {
+@if useModule($enable-bounce-in-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-in-right($prefix-webkit);

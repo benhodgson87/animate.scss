@@ -15,7 +15,7 @@ $class-name: namespace($name-rotate-in-down-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-rotate-in-down-right == true {
+@if useModule($enable-rotate-in-down-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-rotate-in-down-right($prefix-webkit);

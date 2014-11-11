@@ -13,7 +13,7 @@ $class-name: namespace($name-bounce-out-right);
     }
 }
 
-@if $enable-all-modules == true or $enable-bounce-out-right == true {
+@if useModule($enable-bounce-out-right) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-bounce-out-right($prefix-webkit);

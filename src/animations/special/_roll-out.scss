@@ -13,7 +13,7 @@ $class-name: namespace($name-roll-out);
     }
 }
 
-@if $enable-all-modules == true or $enable-roll-out == true {
+@if useModule($enable-roll-out) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-roll-out($prefix-webkit);

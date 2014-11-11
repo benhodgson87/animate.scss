@@ -11,7 +11,7 @@ $class-name: namespace($name-zoom-in);
     }
 }
 
-@if $enable-all-modules == true or $enable-zoom-in == true {
+@if useModule($enable-zoom-in) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-zoom-in($prefix-webkit);

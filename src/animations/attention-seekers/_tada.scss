@@ -19,7 +19,7 @@ $class-name: namespace($name-tada);
     }
 }
 
-@if $enable-all-modules == true or $enable-tada == true {
+@if useModule($enable-tada) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animation-tada($prefix-webkit);

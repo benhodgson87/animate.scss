@@ -13,7 +13,7 @@ $class-name: namespace($name-fade-in-left-big);
     }
 }
 
-@if $enable-all-modules == true or $enable-fade-in-left-big == true {
+@if useModule($enable-fade-in-left-big) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-fade-in-left-big($prefix-webkit);

@@ -14,7 +14,7 @@ $class-name: namespace($name-rotate-out);
     }
 }
 
-@if $enable-all-modules == true or $enable-rotate-out == true {
+@if useModule($enable-rotate-out) {
     @if $enable-prefixes == true {
         @-webkit-keyframes #{$keyframe-name} {
             @include animate-rotate-out($prefix-webkit);
