@@ -1,0 +1,117 @@
+// ************************************************************************
+//
+// Animate.scss
+// Enable Animation Modules
+//
+// By default, animation functionality is not included to save file size
+// To include the keyframes and rules in your output CSS, set each to true
+// You can also enable-all-modules to override the individual values
+//
+// ************************************************************************
+
+
+// Override individual module variables and enable all?
+// Careful now
+$enable-all-modules           : false !default;
+
+
+// Fade In
+$enable-fade-in               : false !default;
+$enable-fade-in-up            : false !default;
+$enable-fade-in-up-big        : false !default;
+$enable-fade-in-down          : false !default;
+$enable-fade-in-down-big      : false !default;
+$enable-fade-in-left          : false !default;
+$enable-fade-in-left-big      : false !default;
+$enable-fade-in-right         : false !default;
+$enable-fade-in-right-big     : false !default;
+
+
+// Fade Out
+$enable-fade-out              : false !default;
+$enable-fade-out-up           : false !default;
+$enable-fade-out-up-big       : false !default;
+$enable-fade-out-down         : false !default;
+$enable-fade-out-down-big     : false !default;
+$enable-fade-out-left         : false !default;
+$enable-fade-out-left-big     : false !default;
+$enable-fade-out-right        : false !default;
+$enable-fade-out-right-big    : false !default;
+
+
+// Bounce In
+$enable-bounce-in             : false !default;
+$enable-bounce-in-up          : false !default;
+$enable-bounce-in-down        : false !default;
+$enable-bounce-in-left        : false !default;
+$enable-bounce-in-right       : false !default;
+
+
+// Bounce Out
+$enable-bounce-out            : false !default;
+$enable-bounce-out-up         : false !default;
+$enable-bounce-out-down       : false !default;
+$enable-bounce-out-left       : false !default;
+$enable-bounce-out-right      : false !default;
+
+
+// Rotate In
+$enable-rotate-in             : false !default;
+$enable-rotate-in-up-left     : false !default;
+$enable-rotate-in-up-right    : false !default;
+$enable-rotate-in-down-left   : false !default;
+$enable-rotate-in-down-right  : false !default;
+
+
+// Rotate Out
+$enable-rotate-out            : false !default;
+$enable-rotate-out-up-left    : false !default;
+$enable-rotate-out-up-right   : false !default;
+$enable-rotate-out-down-left  : false !default;
+$enable-rotate-out-down-right : false !default;
+
+
+// Flips
+$enable-flip                  : false !default;
+$enable-flip-in-x             : false !default;
+$enable-flip-in-y             : false !default;
+$enable-flip-out-x            : false !default;
+$enable-flip-out-y            : false !default;
+
+
+// Lightspeed
+$enable-lightspeed-in         : false !default;
+$enable-lightspeed-out        : false !default;
+
+
+// Attention Seekers
+$enable-bounce                : false !default;
+$enable-flash                 : false !default;
+$enable-pulse                 : false !default;
+$enable-rubber-band           : false !default;
+$enable-swing                 : false !default;
+$enable-shake                 : false !default;
+$enable-tada                  : false !default;
+$enable-wobble                : false !default;
+
+
+// Special
+$enable-hinge                 : false !default;
+$enable-roll-in               : false !default;
+$enable-roll-out              : false !default;
+
+
+// Zoom In
+$enable-zoom-in               : false !default;
+$enable-zoom-in-down          : false !default;
+$enable-zoom-in-left          : false !default;
+$enable-zoom-in-right         : false !default;
+$enable-zoom-in-up            : false !default;
+
+
+// Zoom Out
+$enable-zoom-out              : false !default;
+$enable-zoom-out-down         : false !default;
+$enable-zoom-out-left         : false !default;
+$enable-zoom-out-right        : false !default;
+$enable-zoom-out-up           : false !default;
