@@ -58,6 +58,11 @@ Autoprefixer to handle prefixing.
 When enabled, all necessary CSS declarations include vendor prefixes for Webkit,
 Mozilla, and Opera browsers.
 
+##### Enable Vendor Prefixes
+```scss
+$enable-prefixes: true;
+```
+
 
 #### Class Naming
 
