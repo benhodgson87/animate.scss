@@ -1,0 +1,19 @@
+{
+  "name": "animate-scss",
+  "version": "1.2.2",
+  "description": "A powerful, highly customisable SCSS port of Dan Eden's animate.css library.",
+  "main": "src/_animate.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benhodgson87/animate.scss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benhodgson87/animate.scss/issues"
+  },
+  "homepage": "https://github.com/benhodgson87/animate.scss#readme"
+}
